@@ -1,0 +1,12 @@
+apiVersion: 1
+providers:
+  - name: ftwvps
+    orgId: 1
+    folder: FTW VPS Stack
+    folderUid: ftwvps
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    updateIntervalSeconds: 60
+    options:
+      path: /etc/grafana/dashboards
