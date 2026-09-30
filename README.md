@@ -20,7 +20,7 @@ Every container runs non-root with a read-only root filesystem, all capabilities
 `no-new-privileges` and a memory limit. Only Caddy publishes ports; Prometheus and
 node_exporter sit on a Docker network with `internal: true` and no route to the internet.
 
-By [Fractal Techware](https://fractaltechware.gumroad.com/?utm_source=github&utm_medium=readme&utm_campaign=free-repo). MIT licensed.
+By [Fractal Techware](https://store.fractaltechware.com/?utm_source=github&utm_medium=readme&utm_campaign=free-repo). MIT licensed.
 
 ## What's included
 
@@ -143,7 +143,7 @@ run-tests.sh                  # everything CI runs, on your machine
 ## Want the full pack?
 
 This repository is a free, fully working subset of the
-**[Single-VPS Observability Stack](https://fractaltechware.gumroad.com/l/vps-observability-stack?utm_source=github&utm_medium=readme&utm_campaign=free-repo)**
+**[Single-VPS Observability Stack](https://store.fractaltechware.com/l/vps-observability-stack?utm_source=github&utm_medium=readme&utm_campaign=free-repo)**
 — same compose project, same hardening, same test standard. The paid tiers add the parts that
 turn a monitoring stack into something you can be on call with:
 
@@ -160,7 +160,7 @@ turn a monitoring stack into something you can be on call with:
 Alerts in this repository fire in Prometheus and are visible at `/prometheus/alerts`; routing
 them to a webhook, e-mail, Slack or Telegram needs Alertmanager, which ships from Starter up.
 
-[See the full stack on Gumroad →](https://fractaltechware.gumroad.com/l/vps-observability-stack?utm_source=github&utm_medium=readme&utm_campaign=free-repo)
+[See the full stack on Gumroad →](https://store.fractaltechware.com/l/vps-observability-stack?utm_source=github&utm_medium=readme&utm_campaign=free-repo)
 
 ## More free repos
 
