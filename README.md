@@ -29,7 +29,7 @@ By [Fractal Techware](https://store.fractaltechware.com/?utm_source=github&utm_m
 | Services | Caddy 2.11.4 (HTTPS), Prometheus 3.14.0, Grafana 13.2.2, node_exporter 1.12.1 — all pinned |
 | Access | `https://your-domain/` → Grafana (own login); `/prometheus/` behind bcrypt basic auth |
 | TLS | Automatic Let's Encrypt/ZeroSSL certificates, or `--tls internal` for a local CA (tests, private networks) |
-| Dashboard | **1** provisioned: *VPS Host* — CPU, load, memory, swap and OOM kills, filesystems, inodes, disk I/O, network |
+| Dashboard | **1** provisioned: *VPS Host* — CPU, load, memory, swap and OOM kills, filesystems, inodes, disk I/O, network. Also on grafana.com as import ID [**25835**](https://grafana.com/grafana/dashboards/25835-vps-host-node-exporter/), if you only want the dashboard for a Grafana you already run |
 | Alerts | **6** essential rules, each with promtool unit tests: `TargetDown`, `HostHighCpuUsage`, `HostOutOfMemory`, `HostDiskSpaceLow`, `HostDiskWillFillIn24Hours`, `PrometheusConfigReloadFailed` |
 | Secrets | `setup.sh` generates a 40-character Grafana admin password and a separate Prometheus UI password (+ its bcrypt hash for Caddy) into `stack/secrets/` (mode 0700, git-ignored). No default credentials exist in this repo. |
 | Data | Named volumes; retention by time **and** size (`PROMETHEUS_RETENTION_TIME`, `PROMETHEUS_RETENTION_SIZE`) |
@@ -82,6 +82,10 @@ Adding your own alerts: drop a file in `stack/prometheus/rules/`, add unit tests
 `docker compose kill -s HUP prometheus`.
 Adding dashboards: copy the JSON into `stack/grafana/dashboards/` — provisioning picks it up
 within a minute.
+
+The *VPS Host* dashboard on its own, for an existing Grafana: **Dashboards → New → Import**,
+paste **25835**, pick your Prometheus. That copy uses a data source variable instead of this
+stack's provisioned uid, so it imports anywhere.
 
 ## Validate it yourself
 
