@@ -151,7 +151,7 @@ This repository is a free, fully working subset of the
 — same compose project, same hardening, same test standard. The paid tiers add the parts that
 turn a monitoring stack into something you can be on call with:
 
-| | **Free** (this repo) | **Starter** $19 | **Pro** $49 | **Studio** $99 |
+| | **Free** (this repo) | **Starter** $19 | **Pro** $49 | **Agency** $299 |
 |---|:---:|:---:|:---:|:---:|
 | Caddy HTTPS, Prometheus, Grafana, node_exporter, generated passwords, hardened containers | yes | yes | yes | yes |
 | Dashboards | 1 | 3 | 5 | 5 |
